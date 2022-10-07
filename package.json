@@ -1,7 +1,7 @@
 {
-  "homepage": "https://horizon-ui.com/horizon-ui-chakra",
-  "name": "horizon-ui-chakra",
-  "version": "1.0.1",
+  "homepage": "https://husam287.github.io",
+  "name": "hd-stores",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^1.1.5",
@@ -42,7 +42,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run build && gh-pages -d build",
     "sitemap": "babel-node ./sitemap-builder.js"
   },
   "resolutions": {

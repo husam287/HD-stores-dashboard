@@ -4,8 +4,8 @@ import React from 'react'
 
 const UserTableRow = ({
     name,
-    email,
-    branchName
+    location,
+    phoneNumber
 }) => {
     return (
         <Tr>
@@ -13,10 +13,10 @@ const UserTableRow = ({
                 {name}
             </Td>
             <Td>
-                {email}
+                {location}
             </Td>
             <Td>
-                {branchName}
+                {phoneNumber}
             </Td>
             <Td>
                 <TableControl />

@@ -2,22 +2,20 @@ import React from "react";
 
 import { Icon } from "@chakra-ui/react";
 import {
-  MdBarChart,
-  MdPerson,
   MdHome,
-  MdLock,
   MdOutlineShoppingCart,
+  MdOutlineCategory
 } from "react-icons/md";
 
 import {
   FaUsers,
+  FaCodeBranch
 } from "react-icons/fa";
 
 // Admin Imports
 import MainDashboard from "views/admin/default";
 
 // Auth Imports
-import SignInCentered from "views/auth/signIn";
 import Users from "views/admin/users";
 import Items from "views/admin/items";
 import Branches from "views/admin/Branches";
@@ -56,7 +54,7 @@ const routes = [
     name: "Branches",
     layout: "/admin",
     path: "/branches",
-    icon: <Icon as={FaUsers} width='20px' height='20px' color='inherit' />,
+    icon: <Icon as={FaCodeBranch} width='20px' height='20px' color='inherit' />,
     component: Branches,
   },
   {
@@ -65,20 +63,13 @@ const routes = [
     path: "/categories",
     icon: (
       <Icon
-        as={MdOutlineShoppingCart}
+        as={MdOutlineCategory}
         width='20px'
         height='20px'
         color='inherit'
       />
     ),
     component: Categories,
-  },
-  {
-    name: "Sign In",
-    layout: "/auth",
-    path: "/sign-in",
-    icon: <Icon as={MdLock} width='20px' height='20px' color='inherit' />,
-    component: SignInCentered,
   }
 ];
 

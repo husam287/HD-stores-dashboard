@@ -2,49 +2,48 @@ import {
     Box, Table, TableCaption, Tbody, Th, Thead, Tr, useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
-import UserTableRow from "./components/UserTableRow";
+import UserTableRow from "./components/BranchTableRow";
 
 export default function Branches() {
     const textColor = useColorModeValue("gray.700", "white")
     const tablesProjectData = [
         {
-            name: "Horizon UI Version",
-            email: "$14husam287@hh.com",
-            branchName: "Working",
+            name: "Mall Masr",
+            location: "$14husam287@hh.com",
+            phoneNumber: "01129444515",
         },
         {
-            name: "Add Progress Track",
-            email: "$3husam287@hh.com",
-            branchName: "Canceled",
+            name: "Shoubra",
+            location: "$3husam287@hh.com",
+            phoneNumber: "01129444515",
         },
         {
-            name: "Fix Platform Errors",
-            email: "Nothusam287@hh.com",
-            branchName: "Done",
+            name: "Haram",
+            location: "Nothusam287@hh.com",
+            phoneNumber: "01129444515",
         },
         {
-            name: "Launch our Mobile App",
-            email: "$32husam287@hh.com",
-            branchName: "Done",
+            name: "Abbasya",
+            location: "$32husam287@hh.com",
+            phoneNumber: "01129444515",
         },
         {
-            name: "Add the New Pricing Page",
-            email: "husam287@hh.com",
-            branchName: "Working",
+            name: "5th settlement",
+            location: "husam287@hh.com",
+            phoneNumber: "011294445133",
         },
     ]
 
     return (
         <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
             <Table variant="simple" color={textColor}>
-                <TableCaption>All Branches from all branches</TableCaption>
                 <Thead>
                     <Tr my=".8rem" pl="0px">
                         <Th pl="0px">
                             Name
                         </Th>
-                        <Th>Email</Th>
-                        <Th>Branch</Th>
+                        <Th>Location</Th>
+                        <Th>Phone number</Th>
                         <Th></Th>
                     </Tr>
                 </Thead>
@@ -53,8 +52,8 @@ export default function Branches() {
                         return (
                             <UserTableRow
                                 name={row.name}
-                                email={row.email}
-                                branchName={row.branchName}
+                                location={row.location}
+                                phoneNumber={row.phoneNumber}
                             />
                         )
                     })}

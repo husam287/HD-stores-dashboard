@@ -2,21 +2,13 @@ import { Td, Tr } from '@chakra-ui/react'
 import TableControl from 'components/menu/TableControl'
 import React from 'react'
 
-const UserTableRow = ({
+const CategoryTableRow = ({
     name,
-    email,
-    branchName
 }) => {
     return (
         <Tr>
             <Td>
                 {name}
-            </Td>
-            <Td>
-                {email}
-            </Td>
-            <Td>
-                {branchName}
             </Td>
             <Td>
                 <TableControl />
@@ -25,4 +17,4 @@ const UserTableRow = ({
     )
 }
 
-export default UserTableRow
+export default CategoryTableRow

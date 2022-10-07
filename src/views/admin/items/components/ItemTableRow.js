@@ -2,10 +2,13 @@ import { Td, Tr } from '@chakra-ui/react'
 import TableControl from 'components/menu/TableControl'
 import React from 'react'
 
-const UserTableRow = ({
+const ItemTableRow = ({
     name,
-    email,
-    branchName
+    brand,
+    size,
+    price,
+    qty,
+    category
 }) => {
     return (
         <Tr>
@@ -13,10 +16,19 @@ const UserTableRow = ({
                 {name}
             </Td>
             <Td>
-                {email}
+                {brand}
             </Td>
             <Td>
-                {branchName}
+                {size}
+            </Td>
+            <Td>
+                {price}
+            </Td>
+            <Td>
+                {qty}
+            </Td>
+            <Td>
+                {category}
             </Td>
             <Td>
                 <TableControl />
@@ -25,4 +37,4 @@ const UserTableRow = ({
     )
 }
 
-export default UserTableRow
+export default ItemTableRow

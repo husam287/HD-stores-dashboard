@@ -15,14 +15,13 @@ import {
 
 // Admin Imports
 import MainDashboard from "views/admin/default";
-import NFTMarketplace from "views/admin/marketplace";
-import Profile from "views/admin/profile";
-import DataTables from "views/admin/dataTables";
-import RTL from "views/admin/rtl";
 
 // Auth Imports
 import SignInCentered from "views/auth/signIn";
 import Users from "views/admin/users";
+import Items from "views/admin/items";
+import Branches from "views/admin/Branches";
+import Categories from "views/admin/categories";
 
 const routes = [
   {
@@ -40,9 +39,9 @@ const routes = [
     component: Users,
   },
   {
-    name: "NFT Marketplace",
+    name: "Items",
     layout: "/admin",
-    path: "/nft-marketplace",
+    path: "/items",
     icon: (
       <Icon
         as={MdOutlineShoppingCart}
@@ -51,22 +50,28 @@ const routes = [
         color='inherit'
       />
     ),
-    component: NFTMarketplace,
-    secondary: true,
+    component: Items,
   },
   {
-    name: "Data Tables",
+    name: "Branches",
     layout: "/admin",
-    icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
-    path: "/data-tables",
-    component: DataTables,
+    path: "/branches",
+    icon: <Icon as={FaUsers} width='20px' height='20px' color='inherit' />,
+    component: Branches,
   },
   {
-    name: "Profile",
+    name: "Categories",
     layout: "/admin",
-    path: "/profile",
-    icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
-    component: Profile,
+    path: "/categories",
+    icon: (
+      <Icon
+        as={MdOutlineShoppingCart}
+        width='20px'
+        height='20px'
+        color='inherit'
+      />
+    ),
+    component: Categories,
   },
   {
     name: "Sign In",
@@ -74,14 +79,7 @@ const routes = [
     path: "/sign-in",
     icon: <Icon as={MdLock} width='20px' height='20px' color='inherit' />,
     component: SignInCentered,
-  },
-  {
-    name: "RTL Admin",
-    layout: "/rtl",
-    path: "/rtl-default",
-    icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
-    component: RTL,
-  },
+  }
 ];
 
 export default routes;
